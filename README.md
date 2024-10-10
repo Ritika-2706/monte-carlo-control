@@ -4,7 +4,34 @@
 To develop a Python program to find the optimal policy for the given RL environment using the Monte Carlo algorithm.
 
 ## PROBLEM STATEMENT
-To find the optimal policy for the given RL environment Frozen Lake using the Monte Carlo algorithm which uses both exploration and exploitation for finding the optimal policy. Exploitation: Agent taking an action based on the current knowledge. Exploration: Agent taking a new action to learn new information. The epsilon is used to balance the exploration and exploitation, The value of the epsilon decreases gradually which indicates sufficient exploration and the agent has gained the new information.
+The FrozenLake environment in OpenAI Gym is a grid world problem that challenges reinforcement learning agents to navigate a slippery terrain to reach a goal state while avoiding hazards. Note that the environment is closed with a fence, so the agent cannot leave the grid world.
+
+### States:
+5 Terminal States:
+G (Goal): The state the agent aims to reach.
+H (Hole): A hazardous state that the agent must avoid at all costs.
+
+11 Non-terminal States:
+S (Starting state): The initial position of the agent.
+Intermediate states: Grid cells forming a layout that the agent must traverse.
+
+### Actions:
+The agent has 4 possible actions:
+
+0: Left
+1: Down
+2: Right
+3: Up
+
+### Transition Probabilities:
+Slippery surface with a 33.3% chance of moving as intended and a 66.6% chance of moving in orthogonal directions. For example, if the agent intends to move left, there is a
+
+33.3% chance of moving left, a
+33.3% chance of moving down, and a
+33.3% chance of moving up.
+
+### Rewards:
+The agent receives a reward of 1 for reaching the goal state and 0 otherwise.
 
 ## MONTE CARLO CONTROL ALGORITHM
 Arbitrarily initialize the state value function V(s) and the policy π(s).
